@@ -62,12 +62,12 @@ public class SerialZigbee {
             String line = "";
             String waitFor = "HTTP/1.1 200 OK";
             while ((line = br.readLine()) != null && !line.contains(waitFor)) {
-                System.out.println("Waiting for '" + waitFor + "', got: " + line);
+                //System.out.println("Waiting for '" + waitFor + "', got: " + line);
             }
 
             waitFor = "Temperature=";
             while ((line = br.readLine()) != null && !line.contains(waitFor)) {
-                System.out.println("Waiting for '" + waitFor + "', got: " + line);
+                //System.out.println("Waiting for '" + waitFor + "', got: " + line);
             }
 
             temperature = Integer.parseInt(line.split("=")[1]);
@@ -97,12 +97,12 @@ public class SerialZigbee {
             line = br.readLine();
             
 
-            System.out.println("temperature = " + this.temperature);
-            System.out.println("humidity = " + this.humidity);
-            System.out.println("power_socket = " + this.power_socket);
-            System.out.println("power_light = " + this.power_light);
-            System.out.println("on_light = " + this.on_light);
-            System.out.println("on_socket = " + this.on_socket);
+//            System.out.println("temperature = " + this.temperature);
+//            System.out.println("humidity = " + this.humidity);
+//            System.out.println("power_socket = " + this.power_socket);
+//            System.out.println("power_light = " + this.power_light);
+//            System.out.println("on_light = " + this.on_light);
+//            System.out.println("on_socket = " + this.on_socket);
 
         } catch (Exception e) {
             System.out.println("[PollSensors] Error");
@@ -231,7 +231,7 @@ public class SerialZigbee {
     }
 
     public void setOnSocket(boolean on_socket) {
-        if (on_light) {
+        if (on_socket) {
             this.turnOn3();
         } else {
             this.turnOff3();
