@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://electrosocket.swot.miun.se/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://electrosocket.swot.miun.se/">
+
+<xs:element name="getHumidity" type="tns:getHumidity"/>
+
+<xs:element name="getHumidityResponse" type="tns:getHumidityResponse"/>
+
+<xs:element name="getOnLight" type="tns:getOnLight"/>
+
+<xs:element name="getOnLightResponse" type="tns:getOnLightResponse"/>
+
+<xs:element name="getOnSocket" type="tns:getOnSocket"/>
+
+<xs:element name="getOnSocketResponse" type="tns:getOnSocketResponse"/>
+
+<xs:element name="getSWOTApplicationName" type="tns:getSWOTApplicationName"/>
+
+<xs:element name="getSWOTApplicationNameResponse" type="tns:getSWOTApplicationNameResponse"/>
+
+<xs:element name="getTemperature" type="tns:getTemperature"/>
+
+<xs:element name="getTemperatureResponse" type="tns:getTemperatureResponse"/>
+
+<xs:element name="setOnLight" type="tns:setOnLight"/>
+
+<xs:element name="setOnLightResponse" type="tns:setOnLightResponse"/>
+
+<xs:element name="setOnSocket" type="tns:setOnSocket"/>
+
+<xs:element name="setOnSocketResponse" type="tns:setOnSocketResponse"/>
+
+<xs:complexType name="setOnSocket">
+<xs:sequence>
+<xs:element name="state" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setOnSocketResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getHumidity">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getHumidityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setOnLight">
+<xs:sequence>
+<xs:element name="state" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setOnLightResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getOnSocket">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getOnSocketResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOnLight">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getOnLightResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTemperature">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTemperatureResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSWOTApplicationName">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSWOTApplicationNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
