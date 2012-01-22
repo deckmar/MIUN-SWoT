@@ -1,0 +1,12 @@
+Apps (devices) for Social Web of Things (SWoT)
+==============================================
+
+In this course-project - in a cooperation between Ericsson and Mid Sweden University - the platform Social Web of Things (SWoT) is developed for. 
+
+The SWoT platform aims to solve the future problem of communicating with and between a collection of built-in connected devices scattered around the home and office, e.g. lamps, refrigerators and automatic vacuum cleaners. The platform aims at solving this problem by exploiting the ever-more popular and familiar concept of web-based sites for social networks. In this platform you add your connected devices as friends and chat with them back and forth using plain text. It becomes the responsibility of the device-controlling applications to reliably interpret commands from - and share their states as - natural language. 
+
+In this project two hardware devices were to be controlled and connected to the SWoT platform as devices: a passive NFC temperature sensor in a whiskey bottle and a box containing a pair of electrical switches, temperature sensor and humidity sensor. These devices were controlled by means of an Android application and a Java web service respectively. To be able to provide constant availability on the social platform a third web service was created to handle all communication towards the SWoT platform as well as gathering all data and states from the sensors. This communication manager would be able to interact socially with a user at any time pretending to be the whiskey bottle while in fact the bottle itself in neither connected to the Internet nor self-aware. 
+
+As for the final result all hardware and software components were set up and developed as planned except for the connection to the SWoT platform - the reason for this being Ericssons lock-down of code repository, API and administration interface. For the final presentation a replacement text-based user interface was created and connected to all devices such that this proof-of-concept system could be demonstrated in full operation without the SWoT web interface. 
+
+As for future software work authentication and better dynamic device classification is suggested. For hardware it is suggested to use electrical sockets together with connected wireless switches for backwards compatibility with simple devices such as lamps in order to avoid the analog toggle on the lamp itself hindering the system to turn it on.
